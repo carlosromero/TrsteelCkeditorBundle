@@ -60,6 +60,11 @@ class Configuration implements ConfigurationInterface
                     ->defaultNull()
                 ->end()
             ->end()
+            ->children()
+                ->scalarNode('filemanager')
+                    ->defaultValue('Trsteel\CkeditorBundle\Form\CkeditorType')
+                ->end()
+            ->end()
         ;
 
         return $treeBuilder;
